@@ -50,6 +50,8 @@ export class MapContainer extends Component {
                 name={e.device_id}
                 device_ip={e.device_ip}
                 time={e.time}
+                lat= {e.lat}
+                lng ={e.lng}
                 position={{
                     lat: e.lat,
                     lng: e.lng
@@ -94,6 +96,9 @@ export class MapContainer extends Component {
                       <h4>{this.state.activeMarker ? this.state.activeMarker.name : ''}</h4>
                       <h4>{this.state.activeMarker ? this.state.activeMarker.device_ip : ''}</h4>
                       <h4>{this.state.activeMarker ? this.state.activeMarker.time : ''}</h4>
+                      <h4>{this.state.activeMarker ? "lat: " + this.state.activeMarker.lat : ''}</h4>
+                      <h4>{this.state.activeMarker ? "long: " + this.state.activeMarker.lng : ''}</h4>
+                      
                   </div>
               </InfoWindow>
           </Map>
