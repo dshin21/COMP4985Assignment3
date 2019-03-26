@@ -18,8 +18,7 @@ class App extends Component {
     render() {
         return (
           <div className="App">
-              {/*{this.state.isAuthenticated ? <MapContainer/> : <LoginPage onClickLogin={this.onClickLogin}/>}*/}
-              <MapContainer/>
+              {this.state.isAuthenticated ? <MapContainer/> : <LoginPage onClickLogin={this.onClickLogin}/>}
           </div>
         );
     }
