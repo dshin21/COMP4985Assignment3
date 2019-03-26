@@ -48,6 +48,8 @@ export class MapContainer extends Component {
                 key={i}
                 onClick={this.onMarkerClick}
                 name={e.device_id}
+                device_ip={e.device_ip}
+                time={e.time}
                 position={{
                     lat: e.lat,
                     lng: e.lng
@@ -90,6 +92,8 @@ export class MapContainer extends Component {
               >
                   <div>
                       <h4>{this.state.activeMarker ? this.state.activeMarker.name : ''}</h4>
+                      <h4>{this.state.activeMarker ? this.state.activeMarker.device_ip : ''}</h4>
+                      <h4>{this.state.activeMarker ? this.state.activeMarker.time : ''}</h4>
                   </div>
               </InfoWindow>
           </Map>

@@ -20,7 +20,9 @@ var server = net.createServer(function (socket) {
             collection_coordinates.insertOne({
                 lat:       received_coordinate.lat,
                 lng:       received_coordinate.lng,
-                device_id: received_coordinate.device_id
+                device_id: received_coordinate.device_id,
+                time:      received_coordinate.time,
+                device_ip: received_coordinate.device_ip
             });
         });
     });
